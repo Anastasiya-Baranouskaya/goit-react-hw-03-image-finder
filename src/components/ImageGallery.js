@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import ImageGalleryItem from './ImageGalleryItem';
 import Button from './Button';
 
@@ -24,3 +25,9 @@ class ImageGallery extends Component {
 }
 
 export default ImageGallery;
+
+ImageGallery.propTypes = {
+  array: PropTypes.array.isRequired,
+  onClose: PropTypes.func.isRequired,
+  handleClick: PropTypes.func.isRequired,
+};

@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import { toast } from 'react-toastify';
-
 class Searchbar extends Component {
   state = {
     value: '',

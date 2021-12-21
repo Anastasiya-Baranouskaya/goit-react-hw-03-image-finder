@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class ImageGalleryItem extends Component {
   onClickGalleryItem = () => {
@@ -19,3 +20,9 @@ class ImageGalleryItem extends Component {
 }
 
 export default ImageGalleryItem;
+
+ImageGalleryItem.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  webformatURL: PropTypes.string.isRequired,
+};
