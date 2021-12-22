@@ -9,12 +9,13 @@ class ImageGallery extends Component {
     return (
       <>
         <ul className="ImageGallery">
-          {arr.map(({ id, webformatURL, largeImageURL }) => (
+          {arr.map(({ id, tags, webformatURL, largeImageURL }) => (
             <ImageGalleryItem
               key={id}
               webformatURL={webformatURL}
               largeImageURL={largeImageURL}
               onClose={onClose}
+              tags={tags}
             />
           ))}
         </ul>
@@ -27,7 +28,7 @@ class ImageGallery extends Component {
 export default ImageGallery;
 
 ImageGallery.propTypes = {
-  array: PropTypes.array.isRequired,
+  arr: PropTypes.array.isRequired,
   onClose: PropTypes.func.isRequired,
   handleClick: PropTypes.func.isRequired,
 };

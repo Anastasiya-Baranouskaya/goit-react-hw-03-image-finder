@@ -82,13 +82,12 @@ class App extends Component {
           arr: [...prev.arr, ...data],
           status: 'resolved',
         }));
+        this.windowScroll();
       })
       .catch(err => {
         console.log(err);
         this.setState({ status: 'error' });
       });
-
-    console.log('сработал handleClick');
   };
 
   render() {
