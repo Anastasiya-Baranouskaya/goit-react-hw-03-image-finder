@@ -6,11 +6,8 @@ export default function ImageGalleryItem({
   webformatURL,
   onClose,
 }) {
-  const onClickGalleryItem = () => {
-    onClose(largeImageURL);
-  };
   return (
-    <li className="ImageGalleryItem" onClick={onClickGalleryItem}>
+    <li className="ImageGalleryItem" onClick={() => onClose(largeImageURL)}>
       <img
         src={webformatURL}
         data-source={largeImageURL}
@@ -24,4 +21,5 @@ export default function ImageGalleryItem({
 ImageGalleryItem.propTypes = {
   webformatURL: PropTypes.string.isRequired,
   largeImageURL: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
